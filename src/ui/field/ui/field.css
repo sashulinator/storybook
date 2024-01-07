@@ -1,0 +1,6 @@
+.ui-Field {
+  outline: none;
+  transition:
+    background 0.4s,
+    box-shadow 0.4s;
+}

@@ -1,0 +1,51 @@
+.story-Page {
+  --description_height: 7rem;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--bgSecondary);
+
+  > .toggleDescriptionHeight {
+    position: absolute;
+    right: var(--m);
+    top: var(--m);
+    > span {
+      transform: rotate(90deg);
+    }
+  }
+
+  > .panel {
+    padding: var(--xl);
+  }
+
+  > .description {
+    height: var(--description_height);
+    overflow-y: scroll;
+    border-bottom: 1px solid var(--bgSecondary);
+  }
+
+  > .showcase {
+    overflow: scroll;
+    height: calc(50% - var(--description_height) / 2);
+    border-bottom: 1px solid var(--bgSecondary);
+    display: flex;
+    flex-direction: column;
+    padding: var(--xl);
+  }
+
+  > .controls {
+    height: calc(50% - var(--description_height) / 2);
+    display: flex;
+    flex-direction: column;
+    gap: var(--m);
+    padding: var(--xl) var(--xl) 20% var(--xl);
+  }
+
+  /* descriptionFullHeight */
+
+  &.--descriptionFullHeight,
+  &.--descriptionFullHeight > .description {
+    height: 100%;
+  }
+}
